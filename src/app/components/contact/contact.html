@@ -1,0 +1,86 @@
+<!--
+  =================================================================
+  Componente: Contact Section
+  Muestra información de contacto, accesos directos y ubicación en mapa
+  =================================================================
+-->
+<section id="contact" class="contact" aria-labelledby="contact-heading">
+  <div class="contact__container">
+    <header class="contact__header">
+      <h2 id="contact-heading" class="contact__title">Contáctanos</h2>
+    </header>
+
+    <div class="contact__content">
+      <!-- Información de contacto -->
+      <div class="contact__info">
+        <div class="contact__info-item">
+          <span class="contact__icon" aria-hidden="true">📍</span>
+          <div>
+            <h3 class="contact__info-title">Dirección</h3>
+            <p class="contact__info-text">Calle 4 #5-93, Tuta, Boyacá</p>
+          </div>
+        </div>
+
+        <div class="contact__info-item">
+          <span class="contact__icon" aria-hidden="true">📱</span>
+          <div>
+            <h3 class="contact__info-title">WhatsApp</h3>
+            <p class="contact__info-text">+57 311 223 0139</p>
+          </div>
+        </div>
+
+        <div class="contact__info-item">
+          <span class="contact__icon" aria-hidden="true">📧</span>
+          <div>
+            <h3 class="contact__info-title">Correo Electrónico</h3>
+            <p class="contact__info-text">radiolanceros&#64;hotmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acciones rápidas -->
+      <div class="contact__actions">
+        <a
+          href="https://maps.app.goo.gl/dTkrqvjqoyK1jhMU7"
+          class="contact__action contact__action--map"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Ver ubicación en Google Maps"
+        >
+          <span class="contact__action-icon" aria-hidden="true">🗺</span>
+          Ver en Mapa
+        </a>
+
+        <a
+          href="https://wa.me/573112230139"
+          class="contact__action contact__action--whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Enviar mensaje por WhatsApp"
+        >
+          <span class="contact__action-icon" aria-hidden="true">💬</span>
+          WhatsApp
+        </a>
+
+        <a
+          href="mailto:radiolanceros@hotmail.com"
+          class="contact__action contact__action--email"
+          aria-label="Enviar correo electrónico"
+        >
+          <span class="contact__action-icon" aria-hidden="true">📧</span>
+          Enviar Correo
+        </a>
+      </div>
+    </div>
+
+    <!-- Mapa embebido -->
+    <div class="contact__map-container">
+      <iframe
+        class="contact__map"
+        title="Ubicación de Lanceros Stereo en Google Maps"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.27045248205366!2d-73.22783840239084!3d5.689482056467621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a6f003db0eb41%3A0x43e8ffd28c8d665a!2sEmisora%20lanceros%20est%C3%A9reo!5e0!3m2!1ses-419!2sco!4v1748616104875!5m2!1ses-419!2sco"
+        aria-hidden="false"
+      ></iframe>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,124 @@
+@use "sass:color";
+@use "../../../variables" as *;
+
+/* =================================================================
+   Componente: Hero Section
+   Pantalla inicial con impacto visual y llamado a acción principal
+   ================================================================= */
+
+.hero {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(
+    160deg,
+    color.scale($color-primary, $lightness: -10%) 0%,
+    $color-secondary 100%
+  );
+  color: $color-white;
+  padding: $section-padding;
+  position: relative;
+  overflow: hidden;
+
+  /* Elemento: Logotipo */
+  &__logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)) brightness(1.05);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  /* Elemento: Contenedor de contenido */
+  &__content {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+
+  /* Elemento: Título principal */
+  &__title {
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    color: $color-white;
+  }
+
+  /* Elemento: Lema o eslogan */
+  &__tagline {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    color: $color-white;
+  }
+
+  /* Elemento: Botón CTA */
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: $color-primary;
+    color: $color-white;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    padding: 0.8rem 2.25rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 0 2px transparent;
+
+    &:hover {
+      color: $color-accent;
+      background-color: $color-primary;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25),
+        0 0 0 2px rgba($color-primary, 0.3);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+    /* Elemento: Icono del CTA */
+    &-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  /* Efecto hover para el icono */
+  &:hover &__cta-icon {
+    transform: rotate(15deg);
+  }
+
+  /* Responsive: Tablet */
+  @media (max-width: 768px) {
+    padding: $section-padding;
+    min-height: 100vh;
+
+    &__logo {
+      width: 150px;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  /* Responsive: Mobile */
+  @media (max-width: 480px) {
+    min-height: 100vh;
+
+    &__cta {
+      padding: 0.7rem 1.75rem;
+    }
+  }
+}

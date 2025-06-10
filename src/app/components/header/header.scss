@@ -1,0 +1,103 @@
+@use "../../../variables" as *;
+@use "sass:color";
+
+/* =================================================================
+   Componente: Barra de Navegación
+   Estilos para el header responsive con controles interactivos
+   ================================================================= */
+
+.navbar {
+  $self: &;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Elemento: Logo */
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  /* Elemento: Menú de navegación */
+  &__menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Elemento: Items del menú */
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Elemento: Enlaces */
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $color-accent;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: $color-accent;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  /* Responsive: Tablet y móvil */
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    &__menu {
+      gap: 1rem;
+    }
+
+    &__item {
+      display: none;
+    }
+  }
+
+  /* Responsive: Móvil pequeño */
+  @media (max-width: 480px) {
+    flex-direction: column;
+    padding: 0.5rem;
+
+    &__logo {
+      margin-top: 0.5rem;
+    }
+  }
+}

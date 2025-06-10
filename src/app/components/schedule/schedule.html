@@ -1,0 +1,162 @@
+<!--
+  =================================================================
+  Componente: Program Schedule
+  Muestra la parrilla de programación organizada por días de la semana
+  =================================================================
+-->
+<section id="schedule" class="schedule" aria-labelledby="schedule-heading">
+  <div class="schedule__container">
+    <header class="schedule__header">
+      <h2 id="schedule-heading" class="schedule__title">
+        Nuestra Programación
+      </h2>
+      <p class="schedule__subtitle">
+        Conoce nuestros horarios y programas destacados
+      </p>
+    </header>
+
+    <div class="schedule__grid">
+      <!-- Bloque: Días de semana -->
+      <article class="schedule__day" aria-labelledby="weekdays-heading">
+        <h3 id="weekdays-heading" class="schedule__day-title">
+          <span class="schedule__day-icon">📅</span>
+          Lunes a Viernes
+        </h3>
+
+        <ul class="schedule__program-list">
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="05:00">5:00 AM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">El Tinto</h4>
+              <p class="schedule__program-description">
+                Noticias locales, actualidad nacional y reflexión matutina.
+              </p>
+            </div>
+          </li>
+
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="08:00">8:00 AM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">Mañanas de Lanceros</h4>
+              <p class="schedule__program-description">
+                Música variada, entrevistas y conexión en vivo con la comunidad.
+              </p>
+            </div>
+          </li>
+
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="12:00">12:00 PM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">Tardes de Lanceros</h4>
+              <p class="schedule__program-description">
+                Actualidad, entretenimiento y buena compañía durante el
+                mediodía.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Bloque: Programas especiales -->
+      <article class="schedule__day" aria-labelledby="specials-heading">
+        <h3 id="specials-heading" class="schedule__day-title">
+          <span class="schedule__day-icon">🌟</span>
+          Programas Especiales
+        </h3>
+
+        <ul class="schedule__program-list">
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="05:40">Lunes - 5:40 AM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">Momento de Oración</h4>
+              <p class="schedule__program-description">
+                Inicio espiritual de semana con reflexión y paz interior.
+              </p>
+            </div>
+          </li>
+
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="07:00">Jueves - 7:00 AM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">Los Comunales</h4>
+              <p class="schedule__program-description">
+                Espacio para líderes y comunidades de Tuta, con participación
+                social.
+              </p>
+            </div>
+          </li>
+
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="16:00">Viernes - 4:00 PM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">La Fiesta del Viernes</h4>
+              <p class="schedule__program-description">
+                Música festiva para cerrar la semana con alegría y energía.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Bloque: Sábado -->
+      <article class="schedule__day" aria-labelledby="saturday-heading">
+        <h3 id="saturday-heading" class="schedule__day-title">
+          <span class="schedule__day-icon">🎉</span>
+          Sábado
+        </h3>
+
+        <ul class="schedule__program-list">
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="09:00">9:00 AM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">Magazine Savariedades</h4>
+              <p class="schedule__program-description">
+                Contenido variado, notas culturales y participación ciudadana.
+              </p>
+            </div>
+          </li>
+
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="11:00">11:00 AM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">La Rockola</h4>
+              <p class="schedule__program-description">
+                Éxitos del ayer y hoy en un viaje musical inolvidable.
+              </p>
+            </div>
+          </li>
+
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="14:00">2:00 PM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">Arriba la Tarde</h4>
+              <p class="schedule__program-description">
+                Ritmo y energía para animar tu tarde sabatina.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Bloque: Domingo -->
+      <article class="schedule__day" aria-labelledby="sunday-heading">
+        <h3 id="sunday-heading" class="schedule__day-title">
+          <span class="schedule__day-icon">☀️</span>
+          Domingo
+        </h3>
+
+        <ul class="schedule__program-list">
+          <li class="schedule__program">
+            <time class="schedule__time" datetime="10:00">10:00 AM</time>
+            <div class="schedule__program-details">
+              <h4 class="schedule__program-title">Domingos Espectaculares</h4>
+              <p class="schedule__program-description">
+                Música especial, contenido positivo y entrevistas destacadas.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
