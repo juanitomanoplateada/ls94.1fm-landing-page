@@ -1,59 +1,104 @@
-# Ls941fmLandingPage
+# LS94.1FM – Landing Page Oficial
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+**LS94.1FM** es una aplicación web de una sola página (SPA) desarrollada con Angular para la emisora Lanceros Stereo 94.1 FM, ubicada en Tuta, Boyacá (Colombia). Esta landing page moderna presenta programación, transmisión en vivo, contacto institucional y presencia digital de la emisora.
 
-## Development server
+🌐 **Sitio en vivo**: [https://ls94-1fm.vercel.app](https://ls94-1fm.vercel.app)  
+📁 **Repositorio**: [GitHub - ls94.1fm-landing-page](https://github.com/juanitomanoplateada/ls94.1fm-landing-page)
 
-To start a local development server, run:
+---
+
+## 📌 Propósito y Alcance
+
+El objetivo de este proyecto es ofrecer una plataforma digital accesible, rápida y adaptable para representar a LS94.1FM en internet, facilitando:
+
+- Información institucional y de programación.
+- Enlace a transmisión en vivo.
+- Contacto para oyentes y patrocinadores.
+
+---
+
+## 🧩 Arquitectura de la Aplicación
+
+La aplicación sigue una arquitectura Angular estándar basada en componentes independientes (standalone), iniciando desde `index.html` con el componente raíz `<app-root>`.
+
+### Estructura principal
+
+- `index.html`: punto de entrada del HTML.
+- `main.ts`: bootstraps del módulo principal.
+- `app.ts`: componente raíz (`AppComponent`).
+- `app.html`: orquesta los componentes secundarios.
+
+### Componentes UI
+
+- **Header**: navegación y branding.
+- **Hero**: bienvenida y llamada a la acción.
+- **Live**: acceso a transmisión en vivo.
+- **Schedule**: programación radial.
+- **AboutUs**: información institucional.
+- **Contact**: datos de contacto y localización.
+- **Footer**: enlaces legales y sociales.
+
+---
+
+## ⚙️ Stack Tecnológico
+
+| Tecnología | Rol |
+|------------|-----|
+| Angular CLI | Framework principal |
+| SCSS        | Preprocesador de estilos |
+| TypeScript  | Lógica de componentes |
+| HTML5       | Estructura semántica |
+| Vercel      | Despliegue continuo |
+
+---
+
+## 🚀 Instalación y Desarrollo
+
+Clona el proyecto:
 
 ```bash
-ng serve
+git clone https://github.com/juanitomanoplateada/ls94.1fm-landing-page.git
+cd ls94.1fm-landing-page
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Instala dependencias:
 
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para entorno local:
 
 ```bash
-ng generate --help
+npm run dev
 ```
 
-## Building
-
-To build the project run:
+Para producción:
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🧪 Desarrollo y Pruebas
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Estructura modular basada en Angular Standalone Components.
+- Soporte para SCSS global y por componente.
+- Configuración optimizada en `angular.json` para builds de desarrollo y producción.
+- Límite de bundle: advertencia > 500kB, error > 1MB.
+- Source maps habilitados en desarrollo.
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 📝 Licencia
 
-For end-to-end (e2e) testing, run:
+Distribuido bajo licencia [MIT](LICENSE).
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📸 Preview
 
-## Additional Resources
+![Vista previa del sitio](./public/preview.png)
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
